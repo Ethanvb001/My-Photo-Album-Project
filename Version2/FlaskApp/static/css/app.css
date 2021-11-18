@@ -1,0 +1,298 @@
+:root {
+    background-color: #92c7bb;
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: #092510;
+    margin-bottom: 5rem;
+}
+
+h1>span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin-bottom: 5px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*	Tabs
+/*-----------------------------------------------------------------------------------*/
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 19px;
+    /*--Set height of tabs--*/
+    border-bottom: 1px solid #E2E2E2;
+    border-left: 1px solid #E2E2E2;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    /*--Minus 1px from the height of  ul--*/
+    line-height: 18px;
+    /*--aligns text within the tab--*/
+    border: 1px solid #E2E2E2;
+    margin-bottom: -1px;
+    /*--Pull the list item down 1px--*/
+    overflow: hidden;
+    position: relative;
+    background: #f2f2f2;
+    margin-right: 5px;
+    min-width: 73px;
+    text-align: center;
+}
+
+ul.tabs li:first-child {
+    border-left: none;
+}
+
+ul.tabs li a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    font-size: 11px;
+    padding-right: 5px;
+    padding-left: 5px;
+    outline: none;
+}
+
+ul.tabs li a:hover {
+    background: #fff;
+}
+
+html ul.tabs li.active,
+html ul.tabs li.active a:hover {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #3B5998;
+}
+
+ul.tabs li.active a {
+    color: #3B5998;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*	Utilities
+/*-----------------------------------------------------------------------------------*/
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 760px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+.right {
+    float: right;
+    /* float items right */
+}
+
+.left {
+    float: left;
+    /* float items left*/
+}
+
+.container>* {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*	Buttons
+/*-----------------------------------------------------------------------------------*/
+
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #56a5eb;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #0e2c0d;
+    background-color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(19, 151, 14, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*	Typography
+/*-----------------------------------------------------------------------------------*/
+
+a {
+    cursor: pointer;
+    color: #3B5998;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.postInfo {
+    display: block;
+    /*needs to be changed to block in order for the margin to work */
+    color: #808080;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 18px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*	Buttons
+/*-----------------------------------------------------------------------------------*/
+
+.button {
+    background-color: #ECEEF5;
+    border: 1px solid #CAD4E7;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 2px 3px 2px 2px;
+    margin-right: 5px;
+}
+
+.button:hover {
+    border: 1px solid #9DACCE;
+    text-decoration: none;
+}
+
+.buttonimage {
+    background: url(../images/icon.png);
+    color: #3B5998;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+}
+
+.tabHeader {
+    background-color: #F2F2F2;
+    border-top: solid 1px #E2E2E2;
+    padding: 4px 5px 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 379px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+    position: relative;
+    -moz-box-shadow: 0 14px 10px -12px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 14px 10px -12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 14px 10px -12px rgba(0, 0, 0, 0.7);
+}
