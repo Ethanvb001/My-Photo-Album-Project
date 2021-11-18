@@ -1,0 +1,5 @@
+installed flask
+created home page
+Connected to mysql database
+Installed extentions and interpreters
+Started html and css coding
