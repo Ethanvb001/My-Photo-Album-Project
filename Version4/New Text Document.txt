@@ -1,0 +1,3 @@
+Added log in references
+worked on sign in sign out 
+additional page layouts

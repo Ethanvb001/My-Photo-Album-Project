@@ -1,0 +1,3 @@
+added user page  
+added photo editor, uploading, deleting, viewing
+added metadata editor
