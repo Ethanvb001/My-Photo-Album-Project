@@ -1,0 +1,2 @@
+Added css standarts
+Edited page layout and theme
