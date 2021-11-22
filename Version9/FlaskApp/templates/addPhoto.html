@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../static/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+    <script src="../static/js/jquery-1.11.2.js"></script>
+
+    <script src="../static/js/jquery.ui.widget.js"></script>
+
+    <script type="text/javascript" src="../static/js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.fileupload-process.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.fileupload-ui.js"></script>
+
+    <script>
+        $(function() {
+            $('#fileupload').fileupload({
+                url: 'upload',
+                dataType: 'json',
+                add: function(e, data) {
+                    data.submit();
+                },
+                success: function(response, status) {
+                    console.log(response.filename);
+                    var filePath = 'static/Uploads/' + response.filename;
+                    $('#imgUpload').attr('src', filePath);
+                    $('#filePath').val(filePath);
+                    console.log('success');
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        })
+    </script>
+
+    <style>
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="maincontent">
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <h1>My Photo Library</h1>
+            </div>
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <a class="btn" href="/logout"> *Logout* </a>
+                <a class="btn" href="/userHome"> *Back Home* </a>
+            </div>
+            <h1>~~~~~~~~~</h1>
+
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="header">
+        </div>
+        <section>
+            <form class="form-horizontal" method="post" action="/addPhoto">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Upload your photo</legend>
+
+                    <!-- Geo location-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtLocation">Geographical location</label>
+                        <div class="col-md-4">
+                            <input id="txtLocation" name="inputLocation" type="text" placeholder="Location" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Capture Date -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtDate">Captured Date</label>
+                        <div class="col-md-4">
+                            <input id="txtDate" name="inputDate" type="text" placeholder="yyyy/mm/dd" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Capture By -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtBy">Captured By</label>
+                        <div class="col-md-4">
+                            <input id="txtBy" name="inputBy" type="text" placeholder="Peter/Susan" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Album -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtAlbum">Album</label>
+                        <div class="col-md-4">
+                            <input id="txtAlbum" name="inputAlbum" type="text" placeholder="Vacation" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtTags">Tags</label>
+                        <div class="col-md-4">
+                            <textarea class="form-control" id="txtTags" name="inputTags"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="txtPost">Photos</label>
+
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                      <span class="btn btn-primary btn-file">
+                          Browse&hellip; <input type="file" id="fileupload" name="file" multiple>
+                      </span>
+                            </span>
+                            <div class="pull-right">
+                                <img id="imgUpload" style="width: 140px; height: 140px;" class="img-thumbnail"><input type="hidden" name="filePath" id="filePath"></input>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label>Would you like to share this picture with other users?.</label><br/>
+                            <input name="private" type="checkbox"> Share with other users <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                        </div>
+
+
+
+
+
+
+                        <!-- Button -->
+                        <div class="form-group">
+
+                            <p class="text-center">
+                                <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Upload" />
+                            </p>
+                        </div>
+                </fieldset>
+            </form>
+
+        </section>
+        <footer class="footer">
+
+        </footer>
+
+        </div>
+</body>
+
+</html>
