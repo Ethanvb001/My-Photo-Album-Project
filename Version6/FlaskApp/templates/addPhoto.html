@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <link href="../static/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="maincontent">
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <h1>My Photo Library</h1>
+            </div>
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <a class="btn" href="/logout"> *Logout* </a>
+                <a class="btn" href="/userHome"> *Back Home* </a>
+            </div>
+            <h1>~~~~~~~~~</h1>
+
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="header">
+        </div>
+        <section>
+            <form class="form-horizontal" method="post" action="/addPhoto">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>Upload your photo</legend>
+
+                    <!-- Geo location-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtLocation">Geographical location</label>
+                        <div class="col-md-4">
+                            <input id="txtLocation" name="inputLocation" type="text" placeholder="Location" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Capture Date -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtDate">Captured Date</label>
+                        <div class="col-md-4">
+                            <input id="txtDate" name="inputDate" type="text" placeholder="yyyy/mm/dd" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Capture By -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtBy">Captured By</label>
+                        <div class="col-md-4">
+                            <input id="txtBy" name="inputBy" type="text" placeholder="Peter/Susan" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Capture By -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtBy">Captured By</label>
+                        <div class="col-md-4">
+                            <input id="txtBy" name="inputBy" type="text" placeholder="Peter/Susan" class="form-control input-md" required>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtTags">Tags</label>
+                        <div class="col-md-4">
+                            <textarea class="form-control" id="txtTags" name="inputTags"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="singlebutton"></label>
+                        <div class="col-md-4">
+                            <h3>Upload picture</h3>
+                            <form action="/uploader" method="POST" enctype="multipart/form-data">
+                                <input type="file" name="file" />
+                                <input type="submit" />
+                            </form>
+                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Save" />
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </section>
+        <footer class="footer">
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
