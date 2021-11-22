@@ -1,0 +1,6 @@
+Finished add photo page
+Fiished user page
+edited error page
+added features to user page 
+Removed ugly code
+added comments
