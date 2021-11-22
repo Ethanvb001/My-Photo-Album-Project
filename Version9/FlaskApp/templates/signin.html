@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <link href="../static/css/app.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/signIn.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="maincontent">
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <h1>My Photo Library</h1>
+            </div>
+            <div class="container">
+                <!--<div id="home" class="flex-center flex-column">-->
+                <a class="btn" href="showSignUp"> *Sign up* </a>
+                <a class="btn" href="#"> ** </a>
+                <a class="btn" href="/userHome"> *Back* </a>
+            </div>
+            <h1>~~~~~~~~~</h1>
+
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <h2>Sign in to my photo album</h2>
+        <form class="form-signin" action="/validateLogin" method="post">
+            <h3>Required information: </h3>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+
+            <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+
+
+
+    <footer class="footer">
+        <p>&copy;* Cmpg 323 project 2 </p>
+        <p>&copy;Ethan van Breda 31583776 a</p>
+    </footer>
+
+    </div>
+</body>
+
+</html>
